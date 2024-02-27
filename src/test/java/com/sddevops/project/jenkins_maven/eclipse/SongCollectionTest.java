@@ -98,10 +98,10 @@ class SongCollectionTest {
 	void testSortSongsBySongLength() {
 		//fail("Not yet implemented");
 		List<Song> sortedSongByLengthList = sc.sortSongsBySongLength();
-		assertEquals(sortedSongByLengthList.get(0).getSongLength(),"3.59");
-		assertEquals(sortedSongByLengthList.get(1).getSongLength(),"3.18");
-		assertEquals(sortedSongByLengthList.get(2).getSongLength(),"3.14");
-		assertEquals(sortedSongByLengthList.get(3).getSongLength(),"2.3");
+		assertEquals(sortedSongByLengthList.get(0).getSongLength(),3.59);
+		assertEquals(sortedSongByLengthList.get(1).getSongLength(),3.18);
+		assertEquals(sortedSongByLengthList.get(2).getSongLength(),3.14);
+		assertEquals(sortedSongByLengthList.get(3).getSongLength(),2.3);
 	}
 
 	/**
