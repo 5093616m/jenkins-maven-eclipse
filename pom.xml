@@ -12,7 +12,7 @@
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
-  <properties>
+ <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
 	<maven.compiler.target>1.8</maven.compiler.target>
@@ -31,35 +31,40 @@
 
   <dependencies>
     <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
 		<groupId>${junit-jupiter.groupId}</groupId>
 		<artifactId>${junit-jupiter.artifactId}</artifactId>
 		<version>${junit-jupiter.version}</version>
 		<scope>test</scope>
- 	</dependency>
+	</dependency>
   </dependencies>
   <build>
-    <plugins>
-        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
-      <plugin>
-			<groupId>${jacoco.groupId}</groupId>
-			<artifactId>${jacoco.artifactId}</artifactId>
-			<version>${jacoco.version}</version>
-			<executions>
-				<execution>
+		<plugins>
+			<plugin>
+				<groupId>${jacoco.groupId}</groupId>
+				<artifactId>${jacoco.artifactId}</artifactId>
+				<version>${jacoco.version}</version>
+				<executions>
+					<execution>
 					<id>prepare-agent</id>
-					<goals>
-						<goal>prepare-agent</goal>
-					</goals>
-				</execution>
-				<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
 					<id>report</id>
 					<phase>verify</phase>
-					<goals>
-						<goal>report</goal>
-					</goals>
-				</execution>
-			</executions>
-		</plugin>
-      </plugins>
-    </build>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+  </build>
 </project>
