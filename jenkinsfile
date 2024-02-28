@@ -27,7 +27,7 @@ pipeline{
 			}
 		}
 		stage('SonarQube analysis'){
-		    def scannerHome = tool 'SonarScanner 4.8.0.2856';
+		    echo "Start scan";
 		    bat "${scannerHome}/bin/sonar-scanner"
 		}
      }
