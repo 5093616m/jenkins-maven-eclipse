@@ -4,6 +4,10 @@ pipeline{
 		maven "maven3.9.6"
 		jdk "OpenJDK11"
 	}
+	environment {
+
+    PATH = "C:\\WINDOWS\\SYSTEM32"
+	}
 	stages{
 		stage("clean"){
 			steps{
