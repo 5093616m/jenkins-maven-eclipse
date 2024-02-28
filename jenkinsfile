@@ -30,7 +30,6 @@ pipeline{
 		    def scannerHome = tool 'SonarScanner 4.8.0.2856';
 		    bat "${scannerHome}/bin/sonar-scanner"
 		    }
-		    }
-          }
-	}
+		  }
+     }
 }
