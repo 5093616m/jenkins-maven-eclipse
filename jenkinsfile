@@ -3,7 +3,7 @@ pipeline{
 	tools {
 		maven "maven3.9.6"
 		jdk "OpenJDK11"
-		sonarqube "SonarQube Scanner 4.8.0.2856"
+		sonarqube scanner "SonarQube Scanner"
 	}
 	environment {
     PATH = "C:\\WINDOWS\\SYSTEM32"
