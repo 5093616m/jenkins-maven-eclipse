@@ -13,23 +13,22 @@ pipeline{
 			echo "Start Clean"
 			bat "mvn clean"
 			}
-		  }
+		}
 		stage("test"){
 			steps{
 			echo "Start Test"
 			bat "mvn test"
 			}
-		  }
+		}
 		stage("build"){
 			steps{
 			echo "Start build"
 			bat "mvn install -DskipTests"
 			}
-		  }
-		stage('SonarQube analysis') {
+		}
+		stage('SonarQube analysis'){
 		    def scannerHome = tool 'SonarScanner 4.8.0.2856';
 		    bat "${scannerHome}/bin/sonar-scanner"
-		    }
-		  }
+		}
      }
 }
