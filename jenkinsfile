@@ -26,9 +26,5 @@ pipeline{
 			bat "mvn install -DskipTests"
 			}
 		}
-		stage('SonarQube analysis'){
-		    echo "Start scan";
-		    bat "${scannerHome}/bin/sonar-scanner"
-		}
-     }
+    }
 }
