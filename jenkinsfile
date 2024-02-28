@@ -26,7 +26,7 @@ pipeline{
 			bat "mvn install -DskipTests"
 			}
 		  }
-		 stage("sonar"){
+		 stage("build"){
 			steps{
 			echo "Start sonar"
 			bat "mvn sonar"
